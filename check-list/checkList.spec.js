@@ -22,7 +22,7 @@ describe('Checklist component', () => {
     let ctrl = checkListController('checkList', null, bindings);
 
     ctrl.$onInit();
-    expect(ctrl.itemList).to.equal(['a', 'b', 'c']);
+    expect(ctrl.itemList).toBe(['a', 'b', 'c']);
   });
 
   it('should limit itemList to 5 items max', function () {
@@ -30,7 +30,7 @@ describe('Checklist component', () => {
     let ctrl = checkListController('checkList', null, bindings);
 
     ctrl.$onInit();
-    expect(ctrl.itemList).to.equal(['a', 'b', 'c', 'd', 'e']);
+    expect(ctrl.itemList).toBe(['a', 'b', 'c', 'd', 'e']);
   });
 
 });
